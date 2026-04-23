@@ -18,8 +18,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={outfit.variable}>
-      <body style={{ fontFamily: "var(--font-outfit), sans-serif" }}>
+    <html lang="fr" className={outfit.variable} suppressHydrationWarning>
+      <body style={{ fontFamily: "var(--font-outfit), sans-serif" }} suppressHydrationWarning>
         {children}
       </body>
     </html>

@@ -1,6 +1,6 @@
 .section {
-  padding: 100px 20px;
-  background-color: var(--background);
+  padding: 80px 20px;
+  background-color: var(--muted);
 }
 
 .container {
@@ -71,7 +71,7 @@
 .icon {
   width: 56px;
   height: 56px;
-  background: hsla(172, 50%, 45%, 0.08);
+  background: rgba(0, 174, 239, 0.08);
   border-radius: 14px;
   display: flex;
   align-items: center;

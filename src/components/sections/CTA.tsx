@@ -14,18 +14,18 @@ const CTA = () => {
           viewport={{ once: true }}
         >
           <div className={styles.content}>
-            <h2 className={styles.title}>Ready to Transform Your Smile?</h2>
+            <h2 className={styles.title}>Prêt à Transformer Votre Sourire ?</h2>
             <p className={styles.description}>
-              Join over 15,000+ happy patients and experience the future of dental care. Book your first appointment and experience personalized care today.
+              Rejoignez plus de 15 000 patients satisfaits et découvrez l'avenir des soins dentaires. Prenez votre premier rendez-vous et bénéficiez de soins personnalisés dès aujourd'hui.
             </p>
             <div className={styles.actions}>
               <button className={styles.btnPrimary}>
                 <Calendar size={18} />
-                Book Now
+                Réserver Maintenant
               </button>
               <button className={styles.btnSecondary}>
                 <Phone size={18} />
-                Call Us
+                Nous Appeler
               </button>
             </div>
           </div>

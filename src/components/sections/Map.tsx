@@ -10,11 +10,11 @@ const Map = () => {
         <div className={styles.header}>
           <div className={styles.tagLine}>
             <MapPin size={18} className={styles.icon} />
-            <span>Visit Our Clinic</span>
+            <span>Visitez Notre Clinique</span>
           </div>
-          <h2 className={styles.title}>Find Us in <span className={styles.highlight}>Cebalat Ben Ammar</span></h2>
+          <h2 className={styles.title}>Cabinet dentaire <span className={styles.highlight}>Dr Ferjani Amir</span></h2>
           <p className={styles.subtitle}>
-            Conveniently located for all your dental needs. We look forward to welcoming you to our modern practice.
+            Idéalement situé pour tous vos besoins dentaires. Nous avons hâte de vous accueillir dans notre cabinet moderne.
           </p>
         </div>
 

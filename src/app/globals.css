@@ -1,33 +1,25 @@
 :root {
-  /* Core Palette - Clinical Elegance */
-  --primary: hsl(172, 50%, 45%);        /* Professional Seafoam */
-  --primary-hover: hsl(172, 50%, 40%);
-  --secondary: hsl(210, 40%, 15%);      /* Deep Slate for Text */
-  --accent: hsl(190, 60%, 50%);         /* Soft Cyan for highlights */
+  /* Core Palette - ODL Blue & White */
+  --primary: #00AEEF;            /* Vibrant ODL Cyan Blue */
+  --primary-hover: #0096ce;
+  --secondary: #0A192F;          /* Richer Midnight Navy for Text/Headers */
+  --accent: #E0F2FE;             /* Light Sky Blue for subtle areas */
+  --soft-cyan: #F0FAFF;          /* Very light clinical ice blue */
+  --warm-beige: #FCFBF8;         /* Warm subtle sand for contrast */
+  --accent-warm: #E2C365;        /* Warm gold/champagne for CTAs */
+  --accent-warm-hover: #D4AF37;
   
-  --background: hsl(210, 25%, 98%);     /* Off-white canvas */
-  --foreground: hsl(210, 40%, 12%);     /* High-legibility text */
+  --background: #FFFFFF;         /* Crisp White Canvas */
+  --foreground: #334155;         /* Deep slate for softer paragraph reading */
   
-  --muted: hsl(210, 20%, 94%);          /* Soft gray for cards */
-  --muted-foreground: hsl(210, 15%, 45%);
+  --muted: #F0F7FA;              /* Pale clinical ice blue for backgrounds */
+  --muted-foreground: #64748B;
   
-  --border: hsl(210, 20%, 90%);
+  --border: #E2E8F0;
   --radius: 12px;
   
-  --glass: hsla(0, 0%, 100%, 0.6);
-  --glass-border: hsla(0, 0%, 100%, 0.4);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: hsl(210, 40%, 8%);
-    --foreground: hsl(210, 20%, 98%);
-    --muted: hsl(210, 30%, 12%);
-    --muted-foreground: hsl(210, 15%, 70%);
-    --border: hsl(210, 30%, 18%);
-    --glass: hsla(210, 40%, 12%, 0.7);
-    --glass-border: hsla(0, 0%, 100%, 0.1);
-  }
+  --glass: hsla(0, 0%, 100%, 0.7);
+  --glass-border: hsla(0, 0%, 100%, 0.5);
 }
 
 * {
@@ -40,8 +32,8 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  background-color: var(--background);
-  color: var(--foreground);
+  background-color: var(--background); /* #FFFFFF */
+  color: var(--foreground); /* #002D44 */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -49,6 +41,10 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--secondary);
 }
 
 button {
@@ -78,8 +74,8 @@ button {
 
 /* Custom Selection */
 ::selection {
-  background-color: hsla(172, 50%, 45%, 0.2);
-  color: hsl(172, 50%, 30%);
+  background-color: rgba(0, 174, 239, 0.2);
+  color: #002D44;
 }
 
 /* Custom Scrollbar */
@@ -101,3 +97,26 @@ button {
   background: var(--muted-foreground);
 }
 
+
+/* Section Utilities */
+.blueSection {
+  background-color: var(--primary);
+  color: white;
+}
+
+.blueSection h1, 
+.blueSection h2, 
+.blueSection h3, 
+.blueSection p {
+  color: white;
+}
+
+.blueSection button {
+  background-color: white;
+  color: var(--primary);
+}
+
+.blueSection button:hover {
+  background-color: var(--accent);
+  color: var(--primary);
+}

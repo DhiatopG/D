@@ -9,11 +9,15 @@ const Footer = () => {
         <div className={styles.top}>
           <div className={styles.brand}>
             <div className={styles.logo}>
-              <span className={styles.logoDot} />
-              Dentiste<span>.</span>
+              <img
+                src="/logo.png"
+                alt="Cabinet dentaire Dr Ferjani Amir"
+                height="36"
+                style={{ display: 'block' }}
+              />
             </div>
             <p className={styles.brandDesc}>
-              Redefining dental care through technology and personalized patient experiences. Dedicated to your smile since 2012.
+              Redéfinir les soins dentaires grâce à la technologie et à des expériences patient personnalisées. Dévoués à votre sourire depuis 2012.
             </p>
             <div className={styles.socials}>
               <a href="#"><Instagram size={20} /></a>
@@ -25,27 +29,27 @@ const Footer = () => {
           <div className={styles.links}>
             <h3>Expertise</h3>
             <ul>
-              <li><a href="#">Cosmetic</a></li>
-              <li><a href="#">General</a></li>
-              <li><a href="#">Surgical</a></li>
-              <li><a href="#">Pediatric</a></li>
+              <li><a href="#">Esthétique</a></li>
+              <li><a href="#">Générale</a></li>
+              <li><a href="#">Chirurgicale</a></li>
+              <li><a href="#">Pédiatrique</a></li>
             </ul>
           </div>
 
           <div className={styles.links}>
-            <h3>Company</h3>
+            <h3>Entreprise</h3>
             <ul>
-              <li><a href="#">About Us</a></li>
+              <li><a href="#">À Propos</a></li>
               <li><a href="#">Journal</a></li>
-              <li><a href="#">Careers</a></li>
+              <li><a href="#">Carrières</a></li>
             </ul>
           </div>
 
           <div className={styles.newsletter}>
-            <h3>Join our Wellness List</h3>
-            <p>Get dental tips and oral health updates directly in your inbox.</p>
+            <h3>Rejoignez notre Liste Bien-être</h3>
+            <p>Recevez des conseils dentaires et des actualités sur la santé bucco-dentaire directement dans votre boîte de réception.</p>
             <form className={styles.form}>
-              <input type="email" placeholder="email@example.com" />
+              <input type="email" placeholder="email@exemple.com" />
               <button type="submit">
                 <Send size={18} />
               </button>
@@ -60,7 +64,7 @@ const Footer = () => {
             <span><Mail size={16} /> care@dentiste.com</span>
           </div>
           <div className={styles.copyright}>
-            © 2024 Dentiste. All rights reserved.
+            © {new Date().getFullYear()} Dentiste. Tous droits réservés.
           </div>
         </div>
       </div>

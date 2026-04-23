@@ -15,26 +15,26 @@ const Hero = () => {
           >
             <span className={styles.tagline}>Advanced Digital Dentistry</span>
             <h1 className={styles.title}>
-              Modern Smiles <br />
-              Starting with <span className={styles.highlight}>Confidence.</span>
+              Implants dentaires <br />
+              à <span className={styles.highlight}>Ariana</span>
             </h1>
             <p className={styles.description}>
-              We combine state-of-the-art technology with a patient-first approach to give you the dental care you deserve. Experience the difference in modern patient care.
+              Nous combinons une technologie de pointe avec une approche centrée sur le patient pour vous offrir les soins dentaires que vous méritez. Découvrez la différence des soins modernes.
             </p>
             <div className={styles.actions}>
-              <button className={styles.btnPrimary} onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>Our Services</button>
-              <button className={styles.btnSecondary}>Book Appointment</button>
+              <button className={styles.btnSecondary} onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>Nos Services</button>
+              <button className={styles.btnPrimary}>Prendre Rendez-vous</button>
             </div>
             
             <div className={styles.stats}>
               <div className={styles.statItem}>
                 <span className={styles.statNumber}>15k+</span>
-                <span className={styles.statLabel}>Happy Patients</span>
+                <span className={styles.statLabel}>Patients Satisfaits</span>
               </div>
               <div className={styles.statDivider} />
               <div className={styles.statItem}>
                 <span className={styles.statNumber}>99%</span>
-                <span className={styles.statLabel}>Success Rate</span>
+                <span className={styles.statLabel}>Taux de Réussite</span>
               </div>
             </div>
           </motion.div>
@@ -61,7 +61,7 @@ const Hero = () => {
                   transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
                 >
                   <Calendar size={18} />
-                  <span>Next Gen Booking</span>
+                  <span>Réservation rapide</span>
                 </motion.div>
                 <motion.div 
                   className={`${styles.badge} glass`}
@@ -70,7 +70,7 @@ const Hero = () => {
                   transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
                 >
                   <Shield size={18} />
-                  <span>100% Secure Care</span>
+                  <span>Soins 100% sécurisés</span>
                 </motion.div>
               </div>
             </div>

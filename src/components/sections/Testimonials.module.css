@@ -1,6 +1,12 @@
 .section {
-  padding: 80px 20px;
-  background-color: var(--muted);
+  padding: 60px 20px;
+  background-color: var(--warm-beige);
+  background-image: 
+    radial-gradient(circle at 0% 0%, rgba(0, 174, 239, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 100% 100%, rgba(0, 174, 239, 0.05) 0%, transparent 50%),
+    radial-gradient(var(--border) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 24px 24px;
+  border-top: 1px solid var(--border);
   overflow: hidden;
 }
 
@@ -40,8 +46,8 @@
   background: white;
   padding: 24px;
   border-radius: 12px;
-  border: 1px solid #EAEAEA;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
   display: flex;
   flex-direction: column;
   min-height: 300px; /* Consistent height for collapsed state */
@@ -71,7 +77,7 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: #004D43; /* Adjusted to match brand theme better */
+  background: var(--primary); /* ODL Blue */
   color: white;
   display: flex;
   align-items: center;
@@ -88,13 +94,13 @@
 .userName {
   font-size: 0.95rem;
   font-weight: 700;
-  color: #333;
+  color: var(--secondary); /* ODL Navy */
   margin: 0;
 }
 
 .date {
   font-size: 0.85rem;
-  color: #777;
+  color: var(--muted-foreground);
 }
 
 .textContainer {
@@ -106,7 +112,7 @@
 .reviewText {
   font-size: 0.95rem;
   line-height: 1.6;
-  color: #444;
+  color: var(--foreground);
   display: -webkit-box;
   -webkit-line-clamp: 5;
   line-clamp: 5;
@@ -122,20 +128,27 @@
   overflow: visible;
 }
 
-/* Fade effect for truncated text */
-.textContainer:not(.isExpanded)::after {
+/* Base fade effect for truncated text */
+.textContainer::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 40px;
-  background: linear-gradient(transparent, white);
+  height: 45px;
+  background: linear-gradient(transparent, #FFFFFF);
   pointer-events: none;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+/* Hide fade effect when expanded */
+.textContainer.isExpanded::after {
+  opacity: 0;
 }
 
 .readMore {
-  color: #004D43;
+  color: var(--primary);
   font-size: 0.85rem;
   font-weight: 600;
   cursor: pointer;
@@ -146,7 +159,7 @@
 
 .readMore:hover {
   text-decoration: underline;
-  color: #00332c;
+  color: var(--primary-hover);
 }
 
 .cardFooter {
