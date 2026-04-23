@@ -12,16 +12,15 @@ const Header = () => {
         </div>
         
         <nav className={styles.nav}>
-          <a href="#plans">Plans</a>
           <a href="#services">Services</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
         </nav>
 
         <div className={styles.cta}>
-          <a href="tel:+1234567890" className={styles.phone}>
+          <a href="tel:+21626790175" className={styles.phone}>
             <Phone size={18} />
-            <span>+1 (234) 567-890</span>
+            <span>+216 26 790 175</span>
           </a>
           <button className={styles.mobileMenu}>
             <Menu />

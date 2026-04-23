@@ -3,11 +3,10 @@
 import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
 import Hero from "@/components/sections/Hero";
-import Plans from "@/components/sections/Plans";
-import PlanComparison from "@/components/sections/PlanComparison";
 import Services from "@/components/sections/Services";
 import Testimonials from "@/components/sections/Testimonials";
 import CTA from "@/components/sections/CTA";
+import Map from "@/components/sections/Map";
 
 export default function Home() {
   return (
@@ -16,10 +15,9 @@ export default function Home() {
       <main>
         <Hero />
         <Services />
-        <Plans />
-        <PlanComparison />
         <Testimonials />
         <CTA />
+        <Map />
       </main>
       <Footer />
     </>

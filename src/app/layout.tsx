@@ -8,8 +8,8 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Dentiste | Modern Dental Care & Wellness Plans",
-  description: "Experience premium dental care with our specialized wellness plans. Modern dentistry designed for your comfort and long-term oral health.",
+  title: "Dentiste | Modern Premium Dental Care",
+  description: "Experience premium dental care with a personalized approach. Modern dentistry designed for your comfort and long-term oral health.",
 };
 
 export default function RootLayout({
@@ -25,4 +25,3 @@ export default function RootLayout({
     </html>
   );
 }
-

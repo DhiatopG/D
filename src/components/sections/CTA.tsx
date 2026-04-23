@@ -16,7 +16,7 @@ const CTA = () => {
           <div className={styles.content}>
             <h2 className={styles.title}>Ready to Transform Your Smile?</h2>
             <p className={styles.description}>
-              Join over 15,000+ happy patients and experience the future of dental care. Book your first appointment or choose a wellness plan today.
+              Join over 15,000+ happy patients and experience the future of dental care. Book your first appointment and experience personalized care today.
             </p>
             <div className={styles.actions}>
               <button className={styles.btnPrimary}>

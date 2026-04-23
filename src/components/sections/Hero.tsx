@@ -16,13 +16,13 @@ const Hero = () => {
             <span className={styles.tagline}>Advanced Digital Dentistry</span>
             <h1 className={styles.title}>
               Modern Smiles <br />
-              Starting with a <span className={styles.highlight}>Smart Plan.</span>
+              Starting with <span className={styles.highlight}>Confidence.</span>
             </h1>
             <p className={styles.description}>
-              We combine state-of-the-art technology with a patient-first approach to give you the dental care you deserve. Explore our holistic wellness plans today.
+              We combine state-of-the-art technology with a patient-first approach to give you the dental care you deserve. Experience the difference in modern patient care.
             </p>
             <div className={styles.actions}>
-              <button className={styles.btnPrimary}>Explore Plans</button>
+              <button className={styles.btnPrimary} onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>Our Services</button>
               <button className={styles.btnSecondary}>Book Appointment</button>
             </div>
             
@@ -49,6 +49,11 @@ const Hero = () => {
           >
             {/* Placeholder for dental image, using a gradient for now as a luxury background */}
             <div className={styles.luxuryBg}>
+              <img 
+                src="/images/hero-dental.png" 
+                alt="Premium Dental Care" 
+                className={styles.luxuryImage} 
+              />
               <div className={styles.floatingBadges}>
                 <motion.div 
                   className={`${styles.badge} glass`}

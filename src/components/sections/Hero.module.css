@@ -3,7 +3,8 @@
   display: flex;
   align-items: center;
   padding: 80px 20px;
-  background: radial-gradient(circle at top right, rgba(14, 165, 233, 0.05), transparent);
+  background: radial-gradient(circle at 10% 20%, hsla(172, 50%, 45%, 0.03) 0%, transparent 50%),
+              radial-gradient(circle at 90% 80%, hsla(190, 60%, 50%, 0.03) 0%, transparent 50%);
   position: relative;
   overflow: hidden;
 }
@@ -19,23 +20,25 @@
 
 .tagline {
   display: inline-block;
-  padding: 8px 16px;
-  background: rgba(14, 165, 233, 0.1);
+  padding: 8px 18px;
+  background: hsla(172, 50%, 45%, 0.08);
   color: var(--primary);
+  border: 1px solid hsla(172, 50%, 45%, 0.1);
   border-radius: 30px;
   font-weight: 600;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   margin-bottom: 24px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
 }
 
 .title {
-  font-size: 4rem;
-  line-height: 1.1;
-  font-weight: 800;
+  font-size: 4.2rem;
+  line-height: 1.05;
+  font-weight: 700;
   color: var(--secondary);
   margin-bottom: 24px;
+  letter-spacing: -0.02em;
 }
 
 .highlight {
@@ -44,9 +47,9 @@
 }
 
 .description {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   color: var(--muted-foreground);
-  line-height: 1.6;
+  line-height: 1.7;
   margin-bottom: 40px;
   max-width: 540px;
 }
@@ -60,32 +63,35 @@
 .btnPrimary {
   background: var(--primary);
   color: white;
-  padding: 16px 32px;
-  border-radius: var(--radius);
+  padding: 18px 36px;
+  border-radius: 12px;
   font-weight: 600;
   font-size: 1rem;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 25px hsla(172, 50%, 45%, 0.15);
 }
 
 .btnPrimary:hover {
   background: var(--primary-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(14, 165, 233, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px hsla(172, 50%, 45%, 0.25);
 }
 
 .btnSecondary {
   border: 1px solid var(--border);
   color: var(--secondary);
-  padding: 16px 32px;
-  border-radius: var(--radius);
+  padding: 18px 36px;
+  border-radius: 12px;
   font-weight: 600;
   font-size: 1rem;
   transition: all 0.3s ease;
+  background: white;
 }
 
 .btnSecondary:hover {
   background: var(--muted);
-  border-color: var(--secondary);
+  border-color: var(--primary);
+  color: var(--primary);
 }
 
 .stats {
@@ -100,13 +106,13 @@
 }
 
 .statNumber {
-  font-size: 1.5rem;
-  font-weight: 800;
+  font-size: 1.6rem;
+  font-weight: 700;
   color: var(--secondary);
 }
 
 .statLabel {
-  font-size: 0.875rem;
+  font-size: 0.85rem;
   color: var(--muted-foreground);
 }
 
@@ -126,15 +132,28 @@
   border-radius: 40px;
   overflow: visible;
   position: relative;
+  z-index: 10;
 }
 
 .luxuryBg {
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #0ea5e9 0%, #1e293b 100%);
   border-radius: 40px;
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.08);
   position: relative;
+  overflow: hidden;
+  background: var(--muted);
+}
+
+.luxuryImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.imageCard:hover .luxuryImage {
+  transform: scale(1.05);
 }
 
 .floatingBadges {
@@ -143,20 +162,21 @@
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 20;
 }
 
 .badge {
   position: absolute;
-  padding: 16px 24px;
-  border-radius: 20px;
+  padding: 14px 22px;
+  border-radius: 16px;
   display: flex;
   align-items: center;
   gap: 12px;
   font-weight: 600;
   color: var(--secondary);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  top: 20%;
-  left: -30px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid var(--glass-border);
   white-space: nowrap;
 }
 

@@ -7,6 +7,7 @@
   height: 80px;
   display: flex;
   align-items: center;
+  transition: all 0.3s ease;
 }
 
 .container {
@@ -16,16 +17,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 24px;
 }
 
 .logo {
   font-size: 1.5rem;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--secondary);
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+  letter-spacing: -0.02em;
 }
 
 .logo span {
@@ -33,40 +35,68 @@
 }
 
 .logoDot {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   background: var(--primary);
-  border-radius: 3px;
+  border-radius: 2px;
   transform: rotate(45deg);
 }
 
 .nav {
   display: flex;
-  gap: 32px;
+  gap: 36px;
 }
 
 .nav a {
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 0.95rem;
   color: var(--muted-foreground);
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
+  padding: 8px 0;
+  position: relative;
 }
 
 .nav a:hover {
-  color: var(--primary);
+  color: var(--secondary);
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width 0.3s ease;
+}
+
+.nav a:hover::after {
+  width: 100%;
 }
 
 .cta {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 24px;
 }
 
 .phone {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-weight: 600;
+  gap: 10px;
+  font-weight: 700;
   color: var(--secondary);
+  font-size: 0.95rem;
+  padding: 10px 20px;
+  background: hsla(172, 50%, 45%, 0.05);
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.phone:hover {
+  background: hsla(172, 50%, 45%, 0.1);
+  color: var(--primary);
 }
 
 .mobileMenu {
