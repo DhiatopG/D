@@ -39,6 +39,7 @@ const ReviewCard = ({ review, reviewKey, isExpanded, onToggle, formatDate }: {
   formatDate: (date: string) => string 
 }) => {
   const [shouldShowReadMore, setShouldShowReadMore] = useState(false);
+  const [imageError, setImageError] = useState(false);
   const textRef = useRef<HTMLParagraphElement>(null);
 
   useEffect(() => {
@@ -56,11 +57,13 @@ const ReviewCard = ({ review, reviewKey, isExpanded, onToggle, formatDate }: {
       transition={{ duration: 0.3 }}
     >
       <div className={styles.cardHeader}>
-        {review.reviewer?.profilePhotoUrl ? (
+        {review.reviewer?.profilePhotoUrl && !imageError ? (
           <img 
             src={review.reviewer.profilePhotoUrl} 
             alt={review.reviewer.displayName || "Patient"} 
             className={styles.userPhoto}
+            referrerPolicy="no-referrer"
+            onError={() => setImageError(true)}
           />
         ) : (
           <div className={styles.photoPlaceholder}>
@@ -110,10 +113,10 @@ const ReviewCard = ({ review, reviewKey, isExpanded, onToggle, formatDate }: {
   );
 };
 
-const Testimonials = () => {
-  const [data, setData] = useState<FeaturableData | null>(null);
+const Testimonials = ({ initialData }: { initialData?: FeaturableData | null }) => {
+  const [data, setData] = useState<FeaturableData | null>(initialData || null);
   const [startIndex, setStartIndex] = useState(0);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(!initialData);
   const [cardsToShow, setCardsToShow] = useState(3);
   const [expandedKeys, setExpandedKeys] = useState<Set<string>>(new Set());
 
@@ -130,6 +133,8 @@ const Testimonials = () => {
   }, []);
 
   useEffect(() => {
+    if (initialData) return; // Skip if we already have SSR data
+
     const fetchReviews = async () => {
       try {
         const response = await fetch('/api/reviews');
@@ -150,7 +155,7 @@ const Testimonials = () => {
     };
 
     fetchReviews();
-  }, []);
+  }, [initialData]);
 
   const nextReviews = () => {
     if (!data || !data.reviews) return;

@@ -1,8 +1,5 @@
-"use client";
-
 import React from 'react';
 import styles from './Services.module.css';
-import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Stethoscope, MapPin } from 'lucide-react';
 
@@ -17,35 +14,23 @@ const Services = () => {
         </div>
         <div className={styles.grid}>
 
-          <motion.div
-            className={styles.card}
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
+          <div className={styles.card}>
             <div className={styles.icon}><Stethoscope size={32} /></div>
             <h3 className={styles.serviceTitle}>Nos Services Dentaires</h3>
             <p className={styles.serviceDescription}>Implants, blanchiment, orthodontie, facettes, couronnes et plus — découvrez tous les soins proposés par le Dr Ferjani Amir.</p>
             <Link href="/services" className={styles.link}>
               Voir Tous les Services →
             </Link>
-          </motion.div>
+          </div>
 
-          <motion.div
-            className={styles.card}
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
+          <div className={styles.card}>
             <div className={styles.icon}><MapPin size={32} /></div>
             <h3 className={styles.serviceTitle}>Zones Desservies</h3>
             <p className={styles.serviceDescription}>Nous accueillons les patients d'Ariana et des environs. Trouvez votre quartier et consultez sans vous déplacer loin.</p>
             <Link href="/areas" className={styles.link}>
               Voir les Zones →
             </Link>
-          </motion.div>
+          </div>
 
         </div>
       </div>

@@ -1,8 +1,5 @@
-"use client";
-
 import React from 'react';
 import styles from './Hero.module.css';
-import { motion } from 'framer-motion';
 import { Calendar, Shield } from 'lucide-react';
 
 import Link from 'next/link';
@@ -12,11 +9,7 @@ const Hero = () => {
     <section className={styles.hero}>
       <div className={styles.container}>
         <div className={styles.content}>
-          <motion.div 
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-          >
+          <div className={styles.heroContent}>
             <span className={styles.tagline}>Cabinet Dentaire Dr Ferjani Amir</span>
             <h1 className={styles.title}>
               Dentiste <br />
@@ -26,7 +19,7 @@ const Hero = () => {
               Nous combinons une technologie de pointe avec une approche centrée sur le patient pour vous offrir les soins dentaires que vous méritez. Découvrez la différence des soins modernes.
             </p>
             <div className={styles.actions}>
-              <button className={styles.btnSecondary} onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>Nos Services</button>
+              <a href="#services" className={styles.btnSecondary}>Nos Services</a>
               <Link href="/contact" className={styles.btnPrimary}>Prendre Rendez-vous</Link>
             </div>
             
@@ -41,16 +34,11 @@ const Hero = () => {
                 <span className={styles.statLabel}>Taux de Réussite</span>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
 
         <div className={styles.visual}>
-          <motion.div 
-            className={styles.imageCard}
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.2 }}
-          >
+          <div className={`${styles.imageCard} ${styles.imageCardAnimated}`}>
             {/* Placeholder for dental image, using a gradient for now as a luxury background */}
             <div className={styles.luxuryBg}>
               <img 
@@ -59,26 +47,20 @@ const Hero = () => {
                 className={styles.luxuryImage} 
               />
               <div className={styles.floatingBadges}>
-                <motion.div 
-                  className={`${styles.badge} glass`}
-                  animate={{ y: [0, -10, 0] }}
-                  transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
-                >
+                <div className={`${styles.badge} ${styles.badge1} glass`}>
                   <Calendar size={18} />
                   <span>Réservation rapide</span>
-                </motion.div>
-                <motion.div 
-                  className={`${styles.badge} glass`}
+                </div>
+                <div 
+                  className={`${styles.badge} ${styles.badge2} glass`}
                   style={{ top: '60%', right: '-20px' }}
-                  animate={{ y: [0, 10, 0] }}
-                  transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
                 >
                   <Shield size={18} />
                   <span>Soins 100% sécurisés</span>
-                </motion.div>
+                </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

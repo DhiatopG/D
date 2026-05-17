@@ -1,8 +1,5 @@
-"use client";
-
 import React from 'react';
 import styles from './CTA.module.css';
-import { motion } from 'framer-motion';
 import { Calendar, Phone } from 'lucide-react';
 
 import Link from 'next/link';
@@ -11,12 +8,7 @@ const CTA = () => {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <motion.div 
-          className={styles.card}
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-        >
+        <div className={styles.card}>
           <div className={styles.content}>
             <h2 className={styles.title}>Prêt à Transformer Votre Sourire ?</h2>
             <p className={styles.description}>
@@ -38,7 +30,7 @@ const CTA = () => {
             <div className={styles.circle} />
             <div className={styles.circleSmall} />
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
