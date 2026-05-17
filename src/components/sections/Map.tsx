@@ -18,13 +18,13 @@ const Map = () => {
         </div>
 
         <div className={styles.mapContainer}>
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3190.6312760050196!2d10.181225875552755!3d36.899168262115026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12e2cb92b5df5263%3A0x184d822d93626bd5!2sCabinet%20dentaire%20Dr%20Ferjani%20Amir!5e0!3m2!1sen!2stn!4v1776961092181!5m2!1sen!2stn" 
-            width="100%" 
-            height="450" 
-            style={{ border: 0 }} 
-            allowFullScreen={true} 
-            loading="lazy" 
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3190.6308286408394!2d10.181221575552764!3d36.89917896211435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12e2cb92b5df5263%3A0x184d822d93626bd5!2sCabinet%20dentaire%20Dr%20Ferjani%20Amir!5e0!3m2!1sen!2stn!4v1779039119267!5m2!1sen!2stn"
+            width="100%"
+            height="350"
+            style={{ border: 0 }}
+            allowFullScreen={true}
+            loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             className={styles.iframe}
           ></iframe>
